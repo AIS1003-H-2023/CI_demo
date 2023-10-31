@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.26)
-project(testing_demo)
+project(CI_test)
 
-option(TESTING_DEMO_BUILD_TESTS "Build tests" ON)
+option(CI_TEST_BUILD_TESTS "Build tests" ON)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -16,7 +16,7 @@ target_include_directories(testingLib INTERFACE "${CMAKE_SOURCE_DIR}/include")
 # Testing
 # ============================
 
-if (TESTING_DEMO_BUILD_TESTS)
+if (CI_TEST_BUILD_TESTS)
 
     # Download Catch2 unit-test framework from GitHub
     include(FetchContent)
